@@ -3,19 +3,69 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+
+    <script src="http://api.mapy.cz/loader.js"></script>
+    <script>Loader.load();</script>
+    <div id="mapa" style="width:400px; height:280px"></div>
+    <script>
+        var center = SMap.Coords.fromWGS84(14.418351467160797, 50.07428790147061);
+        var mapa = new SMap(JAK.gel("mapa"), center, 16);
+        mapa.addDefaultLayer(1).enable();
+        var l = [];
+        for(var i = 1; i < l.length; i++) {
+            mapa.addDefaultLayer(l[i]).enable();
+        };
+        var layer = new SMap.Layer.Marker()
+        mapa.addLayer(layer).enable()
+        var mCoord = SMap.Coords.fromWGS84(14.418351467160797,50.07428790147061);
+        var mOpt = {
+            anchor: {left:14, top:49},
+            url:SMap.CONFIG.img + "/marker/balloon-3.png"
+        }
+        var marker = new SMap.Marker(mCoord,"MyMarker", mOpt);
+        layer.addMarker(marker);
+        var scale = new SMap.Control.Scale();
+        mapa.addControl(scale, {left:"8px", bottom:"25px"});
+        var mOpt = mOpt;
+        var mouse = new SMap.Control.Mouse(mOpt);
+        mapa.addControl(mouse);
+        var keyboard = new SMap.Control.Keyboard(SMap.KB_PAN | SMap.KB_ZOOM);
+        mapa.addControl(keyboard);
+        var selection = new SMap.Control.Selection(2);
+        mapa.addControl(selection);
+        var zn = new SMap.Control.ZoomNotification();
+        mapa.addControl(zn);
+        var zoomOpt = {showZoomMenu:false};
+        var zoom = new SMap.Control.Zoom(null,{titles:["Přiblížit", "Oddálit"], showZoomMenu:false});
+        mapa.addControl(zoom, {right:"2px", top:"10x"});
+        var lnt = "Zobrazit na mapy.cz";
+        var lnd = JAK.mel("a", {href:"http://www.mapy.cz/s/ezyM", target:"_blank", innerHTML:lnt});
+        lnd.style.cssText = "position:absolute;left:8px; bottom:54px;"+
+        "display:block; padding:4px 8px; background-color:#fff; border:medium none;"+
+        "border-radius:3px; box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.3);"+
+        "text-decoration:none; color:#6b7580;";
+        mapa.getContainer().appendChild(lnd);
+    </script>
+
+<style>
+    #mapa{
+        float: right;
+    }
+</style>
 </head>
 <body>
-INITED Solutions s.r.o.
-Karlovo náměstí 317/5
-Praha 2 - Nové Město
-120 00
-
-Tel.: +420 603 755 610
-Email: info@initedsolutions.cz
-
-IČ: 24133051
-DIČ: CZ24133051
-
+INITED Solutions s.r.o.<br>
+Karlovo náměstí 317/5<br>
+Praha 2 - Nové Město<br>
+120 00<br>
+<br>
+<br>
+Tel.: +420 603 755 610<br>
+Email: info@initedsolutions.cz<br>
+<br><br>
+IČ: 24133051<br>
+DIČ: CZ24133051<br>
+<br><br>
 Spisová značka C 181606 vedená u Městského soudu v Praze.
 </body>
 </html>
