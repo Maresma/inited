@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="cz">
+    <meta charset="UTF-8">
+    <title>Inited</title>
+
+    <script>
+        function home() {
+            document.getElementById("frame").src = "home.html";
+        }
+        function produkty() {
+            document.getElementById("frame").src = "produkty.html";
+        }
+        function sluzby() {
+            document.getElementById("frame").src = "sluzby.html";
+        }
+        function kontakty() {
+            document.getElementById("frame").src = "kontakty.html";
+        }
+    </script>
+   <style>
+       #bla{
+           text-align:center;
+           width:100%;
+           height: 100%;
+           background-color: aliceblue;
+       }
+       iframe{
+           width: 70%;
+           height: 500px;
+        }
+
+       table{
+           float: left;
+       }
+
+       td{
+           width: 100px;
+           height: 30px;
+       }
+    </style>
+
+</head>
+<body>
+<img src="img/logoindex.png">
+
+<div id="bla"><iframe id="frame" src="" frameborder="0"></iframe>
+
+<table border="2">
+    <tr>
+        <td><div onclick="home()">Home</div></td>
+
+    </tr>
+    <tr>
+        <td><div onclick="produkty()">Produkty</div></td>
+
+    </tr>
+    <tr>
+        <td><div onclick="sluzby()">Služby</div></td>
+
+    </tr>
+    <tr>
+        <td><div onclick="kontakty()">Kontakty</div></td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
