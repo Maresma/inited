@@ -39,10 +39,6 @@ iframe{
   float: left;
 }
 
-td{
-  width: 100px;
-  height: 30px;
-}
 
 
 /* Starter CSS for Flyout Menu */
@@ -101,7 +97,8 @@ td{
 #cssmenu {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  width: 200px;
+  width: 20%;
+  max-width: 200px;
 }
 #cssmenu ul a,
 #cssmenu ul a:link,
