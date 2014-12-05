@@ -29,10 +29,13 @@ h2, h3{
 iframe{
   width: 70%;
   height: 600px;
-  float: right;
 }
 
-#cssmenu{
+#mapa{
+  float: left;
+
+
+}#cssmenu{
   float: left;
 }
 
