@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 h1,h2,h3{
-  font-family: 'Cambria', sans-serif;
+  font-family: 'Open sans', sans-serif;
 
 }
 
@@ -38,9 +38,6 @@ td{
   width: 100px;
   height: 30px;
 }
-
-
-
 
 
 /* Starter CSS for Flyout Menu */
