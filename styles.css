@@ -2,7 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 h1,h2,h3{
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Adobe Gothic Std B', sans-serif;
+  text-shadow: 0.5px 0.5px 1px gray;
 
 }
 
