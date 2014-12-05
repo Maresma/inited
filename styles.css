@@ -27,7 +27,7 @@ h2, h3{
 
 }
 iframe{
-  width: 60%;
+  width: 70%;
   height: 600px;
 }
 
@@ -97,7 +97,7 @@ iframe{
 #cssmenu {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
-  width: 20%;
+  width: 30%;
   max-width: 200px;
 }
 #cssmenu ul a,
