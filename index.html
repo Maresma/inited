@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head lang="cz">
-    <meta charset="UTF-8">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="script.js"></script>
+
     <title>Inited</title>
 
     <script>
@@ -30,7 +36,7 @@
            height: 600px;
         }
 
-       table{
+       #cssmenu{
            float: left;
        }
 
@@ -44,25 +50,16 @@
 <body>
 <a href= "index.html"><img src="img/logoindex.png"></a>
 
-<div id="bla"><iframe id="frame" src="" frameborder="0"></iframe>
+<div id="bla"><iframe id="frame" src="welcome.html" frameborder="0"></iframe>
 
-<table border="2">
-    <tr>
-        <td><div onclick="home()">Home</div></td>
-
-    </tr>
-    <tr>
-        <td><div onclick="produkty()">Produkty</div></td>
-
-    </tr>
-    <tr>
-        <td><div onclick="sluzby()">Služby</div></td>
-
-    </tr>
-    <tr>
-        <td><div onclick="kontakty()">Kontakty</div></td>
-    </tr>
-</table>
+    <div id='cssmenu'>
+        <ul>
+            <li><a onclick="home()"><span>Home</span></a></li>
+            <li class='active has-sub'><a onclick="produkty()"><span>Produkty</span></a></li>
+            <li><a onclick="sluzby()"><span>Služby</span></a></li>
+            <li class='last'><a onclick="kontakty()"><span>Kontakt</span></a></li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
